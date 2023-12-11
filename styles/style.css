@@ -1,0 +1,206 @@
+:root {
+  --mainColor: none;
+  --textColor1: none;
+  --textColor2: none;
+  --secondColor: none;
+  --thirdColor: none;
+  --fourthColor: none;
+  --iconColor: none;
+  --borderColor: none;
+}
+
+@font-face {
+  font-family: Sylfaen_BPG;
+  src: url("../fonts/sylfean.ttf");
+}
+.light {
+  --mainColor: #fbf2df;
+  --textColor1: black;
+  --textColor2: white;
+  --secondColor: rgb(38,73,92);
+  --thirdColor: #D9D9D9;
+  --fourthColor: #BF9575;
+  --iconColor: var(--secondColor);
+  --borderColor: none;
+}
+
+.dark {
+  --mainColor: rgb(40, 40 ,40);
+  --textColor1: white;
+  --textColor2: black;
+  --secondColor: #FF9F1C;
+  --thirdColor: none;
+  --fourthColor: #FF9F1C;
+  --iconColor: var(--secondColor);
+  --borderColor: var(--secondColor) ;
+}
+
+.colorBlind {
+  --borderColor: black;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: var(--mainColor);
+  color: var(--textColor1);
+  font-family: "Sylfaen_BPG", cursive;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--textColor1);
+}
+
+nav {
+  width: 20vw;
+  height: 100vh;
+  background-color: var(--secondColor);
+  color: var(--textColor2);
+  position: fixed;
+  border-right: var(--borderColor) 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  transition: 0.8s;
+}
+
+nav > i {
+  color: var(--mainColor);
+  font-size: 6rem;
+}
+
+nav > div {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+nav > div > a {
+  text-decoration: none;
+  color: var(--textColor2);
+  transition: 0.8s;
+}
+
+nav > div > a:hover {
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  width: 80vw;
+  margin-left: 20vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: auto;
+  background-color: var(--thirdColor);
+  height: 15vh;
+  width: 80vw;
+  border-bottom: solid var(--borderColor) 3px;
+}
+
+#searchBar {
+  transition: 0.8s;
+  border-radius: 3vw;
+  border: none;
+  width: 20vw;
+  height: 6vh;
+  background-color: var(--fourthColor);
+  margin-right: 20px;
+  outline: none;
+  background-image: url("../images/magnifing_glass.svg");
+  background-size: 1.2rem;
+  background-position: 10px 9px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+.Subjects {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: auto;
+}
+
+#math,
+#physics,
+#chemistry {
+  overflow: visible;
+  width: 20vw;
+  height: 35vh;
+  border-radius: 10% 10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  font-size: 2.2rem;
+  color: var(--textColor2);
+  transition: scale 0.8s;
+  background-color: var(--secondColor);
+}
+#math:hover,
+#physics:hover,
+#chemistry:hover {
+  scale: 1.1 1.1;
+}
+
+#math {
+  background-image: url("../images/math.png");
+}
+
+#physics {
+  background-image: url("../images/physics.jpg");
+}
+
+#chemistry {
+  background-image: url("../images/chemistry.avif");
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: auto;
+  width: 12vw;
+  margin-left: 2vw;
+}
+
+#sun,
+#moon,
+#eye {
+  font-size: 2rem;
+  color: var(--iconColor);
+  transition: 0.8s;
+}
+#sun:hover,
+#moon:hover,
+#eye:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+}
+
+#sun:hover {
+  color: rgb(255, 204, 0);
+}
+
+#moon:hover {
+  color: rgb(0, 0, 75);
+}
+
+#eye:hover {
+  color: rgb(231, 145, 159);
+}/*# sourceMappingURL=style.css.map */

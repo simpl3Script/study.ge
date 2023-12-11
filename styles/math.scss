@@ -1,0 +1,14 @@
+@import './style.scss';
+
+main{
+    @include center();
+}
+
+#newDiv{
+    text-align: center;
+    @include flex(space-around, column, auto);
+    border: black dotted 3px;
+    padding: 10px;
+    width: 70vw;
+    margin: 20px;
+}

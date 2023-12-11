@@ -1,0 +1,45 @@
+@import './style.scss';
+
+:root{
+    --mainColor: none;
+    --textColor1: none;
+    --textColor2: none;
+    --secondColor: none;
+    --thirdColor: none;
+    --fourthColor: none;
+    --iconColor: none;
+    --borderColor: none;
+}
+
+.mainDiv{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 4vh;
+    margin-left: -18.5vw;
+}
+
+#a, #b, #c, #d{
+    
+    width: 26vw;
+    border-color: var(--secondColor);
+    border: dotted 3px;
+    padding: 10px;
+    margin-top:1vh;
+
+    div{
+        width: 40%;
+        @include flex(flex-start, row, 10px);
+    }
+}
+
+#a, #b, #c, #d > div > p{
+    display:inline-block;
+}
+
+.mainDiv > p{
+    font-weight: bold;
+}
+
+#mail, #phone{
+    display:inline-block;
+}
